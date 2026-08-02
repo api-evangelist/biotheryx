@@ -1,0 +1,31 @@
+# BioTheryX
+
+> BioTheryX is a private, clinical-stage biopharmaceutical company in San Diego, California, developing first-in-class targeted protein degraders — bifunctional degraders and molecular glues — for cancer and inflammatory disease, on its proprietary PRODEGY Cereblon-based platform. BioTheryX publishes no API, no developer portal, and no machine-readable contract; this file exists so agents stop looking.
+
+## Company
+
+- [Website](https://www.biotheryx.com/): Company home — "Degrading proteins. Saving lives."
+- [About Us](https://www.biotheryx.com/about-us/): Company background, leadership team, board of directors, and investors
+- [Our Science](https://www.biotheryx.com/our-science/): The ubiquitin-proteasome system, the PRODEGY platform, and publications & presentations
+- [Pipeline](https://www.biotheryx.com/pipeline/): Programs including BTX-9341 (dual CDK4/CDK6 degrader, Phase 1, HR+/HER2- breast cancer), BTX-10908 (SOS1, pan-KRAS mutant cancers), and PDE4 degraders for inflammatory disease
+- [Careers](https://www.biotheryx.com/careers/): Open positions
+- [LinkedIn](https://www.linkedin.com/company/biotheryx-inc./): Company profile
+
+## News
+
+- [News & press releases](https://www.biotheryx.com/category/news/): Clinical, regulatory, and partnership announcements
+- [RSS feed](https://www.biotheryx.com/feed/): Machine-readable feed of the news posts
+
+## API surface
+
+BioTheryX has none. Probed 2026-08-02, all 404 on both `biotheryx.com` and `www.biotheryx.com`:
+`/openapi.json`, `/swagger.json`, `/api-docs`, `/llms.txt`, `/.well-known/security.txt`,
+`/.well-known/openid-configuration`, `/.well-known/oauth-authorization-server`,
+`/.well-known/api-catalog`, `/.well-known/ai-plugin.json`, `/.well-known/agent-card.json`,
+`/.well-known/agent.json`. No `api.` / `developer.` / `docs.` / `portal.` subdomain resolves,
+there is no GitHub organization, and no first-party package exists on npm or PyPI.
+
+## Optional
+
+- [API Evangelist profile](https://apis.io/provider/biotheryx/): How this company is catalogued
+- [apis.yml](https://raw.githubusercontent.com/api-evangelist/biotheryx/refs/heads/main/apis.yml): The APIs.json/apis.yml index for this company
