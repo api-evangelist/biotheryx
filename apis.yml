@@ -12,6 +12,17 @@ description: 'BioTheryX is a private, clinical-stage biopharmaceutical company h
   program: probes on 2026-08-02 returned 404 for /openapi.json, /swagger.json, /api-docs,
   /llms.txt and every /.well-known/ discovery path on biotheryx.com, and there is no
   api./developer./docs./portal. subdomain, GitHub organization, or published SDK.'
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 image: https://www.biotheryx.com/wp-content/themes/biotheryx/assets/images/logo.svg
 url: https://raw.githubusercontent.com/api-evangelist/biotheryx/refs/heads/main/apis.yml
 x-type: company
