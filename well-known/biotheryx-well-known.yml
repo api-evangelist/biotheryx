@@ -3,26 +3,10 @@ method: probed
 source: live HTTP probes of biotheryx.com / www.biotheryx.com
 host: https://www.biotheryx.com
 found: 0
-note: >-
-  Every /.well-known/ discovery path and every common machine-readable contract
-  path returned 404 on both the apex and www hosts. No document was harvested, so
-  no WellKnown / SecurityTxt pointer is wired into apis.yml — this file records the
-  negative probe result so a later re-run knows what was already checked.
-documents:
-- path: /.well-known/security.txt
-  status: 404
-- path: /.well-known/openid-configuration
-  status: 404
-- path: /.well-known/oauth-authorization-server
-  status: 404
-- path: /.well-known/api-catalog
-  status: 404
-- path: /.well-known/ai-plugin.json
-  status: 404
-- path: /.well-known/agent-card.json
-  status: 404
-- path: /.well-known/agent.json
-  status: 404
+note: Every /.well-known/ discovery path and every common machine-readable contract path returned 404
+  on both the apex and www hosts. No document was harvested, so no WellKnown / SecurityTxt pointer is
+  wired into apis.yml — this file records the negative probe result so a later re-run knows what was already
+  checked.
 contract_discovery:
   probed_hosts:
   - www.biotheryx.com
@@ -63,10 +47,30 @@ other_surfaces:
 - surface: WordPress core REST API
   url: https://www.biotheryx.com/wp-json/
   status: 200
-  note: >-
-    Incidental CMS infrastructure exposed by the marketing site's WordPress
-    install, not a product API. Deliberately NOT registered under apis[] — it is
-    not an interface BioTheryX publishes, documents, or supports for consumers.
-conclusion: >-
-  BioTheryX is a clinical-stage therapeutics developer with no public API, no
-  developer program, and no machine-readable contract of any kind as of 2026-08-02.
+  note: Incidental CMS infrastructure exposed by the marketing site's WordPress install, not a product
+    API. Deliberately NOT registered under apis[] — it is not an interface BioTheryX publishes, documents,
+    or supports for consumers.
+conclusion: BioTheryX is a clinical-stage therapeutics developer with no public API, no developer program,
+  and no machine-readable contract of any kind as of 2026-08-02.
+hosts:
+- host: https://www.biotheryx.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
